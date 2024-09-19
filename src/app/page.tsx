@@ -1,7 +1,7 @@
-import { Button } from "@/components/button";
 import Image from "next/image";
 import logo from "../assets/logo.svg";
-import styles from "./page.module.css";
+import trash from "../assets/trash.svg";
+import styles from "./page.module.scss";
 
 export default function Home() {
   return (
@@ -16,9 +16,34 @@ export default function Home() {
         </div>
       </header>
       <main className={styles.main}>
-        <Button variant="primary">Adicionar</Button>
-        <Button variant="secondary">Cancelar</Button>
-        <Button variant="danger">Danger</Button>
+        <section id="tasksList" className={styles.tasks}>
+          <h2>Suas tarefas de hoje</h2>
+          <ul>
+            <li>
+              <input type="checkbox" name="task" id="task_1" />
+              <p>Lavar as mãos</p>
+              <Image src={trash} alt="Icon Botão de deletar task" />
+            </li>
+            <li>
+              <input type="checkbox" name="task" id="task_1" />
+              <p>Fazer um bolo</p>
+              <Image src={trash} alt="Icon Botão de deletar task" />
+            </li>
+            <li>
+              <input type="checkbox" name="task" id="task_1" />
+              <p>Lavar a louça</p>
+              <Image src={trash} alt="Icon Botão de deletar task" />
+            </li>
+          </ul>
+          <h2>Tarefas finalizadas</h2>
+          <ul>
+            <li>
+              <input type="checkbox" name="task" id="task_1" />
+              <p>Lavar a louça</p>
+              <Image src={trash} alt="Icon Botão de deletar task" />
+            </li>
+          </ul>
+        </section>
       </main>
       <footer className={styles.footer}></footer>
     </div>
