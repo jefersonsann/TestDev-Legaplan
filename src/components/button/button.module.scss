@@ -1,0 +1,34 @@
+.content {
+  font-size: 1rem;
+  font-weight: 500;
+  width: 100%;
+  padding: 1rem 2rem;
+  border-radius: 0.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  &.primary {
+    color: #ffffff;
+    background: var(--primary);
+    background: linear-gradient(
+      90deg,
+      var(--primary) 0%,
+      var(--primary-soft) 100%
+    );
+  }
+
+  &.secondary {
+    background: var(--secondary);
+  }
+
+  &.danger {
+    color: #ffffff;
+    background: var(--danger);
+    background: linear-gradient(
+      90deg,
+      var(--danger) 0%,
+      var(--danger-soft) 100%
+    );
+  }
+}
