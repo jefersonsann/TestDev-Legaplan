@@ -7,7 +7,7 @@
   --background: #ffffff;
   --foreground: #000000;
   --border: #d7dde9;
-  --width: 1328;
+  --width: 1328px;
 }
 
 html,
@@ -25,6 +25,7 @@ body {
 
 * {
   font-family: var(--Inter_Tight);
+  font-size: 1rem;
   box-sizing: border-box;
   padding: 0;
   margin: 0;
@@ -34,4 +35,29 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+dialog {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  max-width: 450px;
+  height: 100dvh;
+  padding: 2rem;
+  border: none;
+  border-radius: 1rem;
+  box-shadow: 0 24px 48px -12px rgb(16 24 40 /18%);
+}
+
+::backdrop {
+  background-color: rgb(255 255 255 / 20%);
+  backdrop-filter: blur(3px);
+}
+
+@media (min-width: 450px) {
+  dialog {
+    height: fit-content;
+  }
 }
