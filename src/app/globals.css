@@ -24,6 +24,7 @@ body {
 }
 
 * {
+  font-family: var(--Inter_Tight);
   box-sizing: border-box;
   padding: 0;
   margin: 0;

@@ -5,6 +5,7 @@ import "./globals.css";
 const inter = Inter_Tight({
   subsets: ["latin"],
   display: "swap",
+  variable: "--Inter_Tight",
 });
 
 export const metadata: Metadata = {
@@ -19,7 +20,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="pt-BR">
-      <body className={`${inter.className}`}>{children}</body>
+      <body className={inter.variable}>{children}</body>
     </html>
   );
 }
