@@ -6,14 +6,18 @@ Seguindo boas práticas de programação e fidelidade MÁXIMA ao design disponib
 
 > Demo do projeto: [legaplan](https://test-dev-legaplan.vercel.app/)
 
-![home_tarefas_desktop](https://test-dev-legaplan.vercel.app/home_tarefas_desktop.png)
-![home_tarefas_mobile](https://test-dev-legaplan.vercel.app/home_tarefas_mobile.png)
-
-![modal_nova_tarefa_desktop](https://test-dev-legaplan.vercel.app/modal_nova_tarefa_desktop.png)
-![modal_nova_tarefa_mobile](https://test-dev-legaplan.vercel.app/modal_nova_tarefa_mobile.png)
-
-![modal_deletar_desktop](https://test-dev-legaplan.vercel.app/modal_deletar_desktop.png)
-![modal_deletar_mobile](https://test-dev-legaplan.vercel.app/modal_deletar_mobile.png)
+<div align="center">
+	<img width = "79.6%" src="https://test-dev-legaplan.vercel.app/home_tarefas_desktop.png">
+  <img width = "19.7%" src="https://test-dev-legaplan.vercel.app/home_tarefas_mobile.png">
+</div>
+<div align="center">
+	<img width = "79.6%" src="https://test-dev-legaplan.vercel.app/modal_nova_tarefa_desktop.png">
+  <img width = "19.7%" src="https://test-dev-legaplan.vercel.app/modal_nova_tarefa_mobile.png">
+</div>
+<div align="center">
+	<img width = "79.6%" src="https://test-dev-legaplan.vercel.app/modal_deletar_desktop.png">
+  <img width = "19.7%" src="https://test-dev-legaplan.vercel.app/modal_deletar_mobile.png">
+</div>
 
 ## 🚀 Instalando Legaplan
 
