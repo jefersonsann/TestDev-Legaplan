@@ -1,0 +1,112 @@
+.tasks,
+.tasks_group,
+.tasks ul {
+  display: flex;
+  flex-direction: column;
+}
+
+.tasks {
+  gap: 1.5rem;
+  width: 100%;
+  padding: 2rem;
+  margin: 2rem 0;
+  border: 1px solid #eaecf0;
+  border-radius: 1.5rem;
+  box-shadow: 0 1px 2px #1018280d;
+
+  h2 {
+    font-size: 1rem;
+    font-weight: 400;
+    color: #0000008a;
+    text-align: center;
+    margin-bottom: 1.2rem;
+  }
+
+  ul {
+    gap: 0.5rem;
+
+    .taskItemSkeleton {
+      padding: 1.5rem;
+      background-color: #d7dde9;
+      border-radius: 0.5rem;
+      list-style: none;
+    }
+
+    .taskItem {
+      display: flex;
+      align-items: center;
+      border: 1px dashed #d7dde9;
+      border-radius: 0.5rem;
+
+      &:hover {
+        background-color: #f7f9fd;
+        border-color: transparent;
+      }
+
+      .checkbox {
+        flex-grow: 1;
+
+        input {
+          position: absolute;
+          opacity: 0;
+          width: 0;
+          height: 0;
+
+          &:checked + label {
+            text-decoration: line-through;
+            color: #0000008a;
+          }
+          &:checked + label .checkboxCustom {
+            background-color: #a0dcf6;
+            border: 1px solid #0796d3;
+          }
+          &:checked + label .checkboxCustom::after {
+            opacity: 1;
+          }
+        }
+
+        label {
+          display: flex;
+          align-items: center;
+          gap: 1rem;
+          padding: 1rem;
+          cursor: pointer;
+
+          .checkboxCustom {
+            width: 24px;
+            height: 24px;
+            border: 1px solid #b0bbd1;
+            border-radius: 4px;
+            transition: background-color 0.2s ease;
+
+            &::after {
+              content: "";
+              display: block;
+              position: relative;
+              top: 2px;
+              left: 7px;
+              width: 6px;
+              height: 12px;
+              border: solid #0796d3;
+              border-width: 0 2px 2px 0;
+              transform: rotate(45deg);
+              opacity: 0;
+              transition: opacity 0.2s ease;
+            }
+          }
+        }
+      }
+    }
+
+    .delete {
+      padding: 1rem;
+      cursor: pointer;
+    }
+  }
+
+  @media (min-width: 450px) {
+    ul {
+      gap: 1.5rem;
+    }
+  }
+}
