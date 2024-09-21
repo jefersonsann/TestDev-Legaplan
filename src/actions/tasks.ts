@@ -44,6 +44,8 @@ async function updateTask({ id }: { id: string }) {
 
     TASKS[index].completed = !TASKS[index].completed;
 
+    localStorage.setItem("TASKS", JSON.stringify(TASKS));
+
     return new Response(
       JSON.stringify({ message: "Successfully update task", task: TASKS }),
       { status: 202 }
@@ -62,7 +64,7 @@ async function deleteTask(id: string) {
     throw new Error("Task not found");
   }
   TASKS.splice(index, 1);
-  localStorage.setItem("tasks", JSON.stringify(TASKS));
+  localStorage.setItem("TASKS", JSON.stringify(TASKS));
   return new Response(
     JSON.stringify({ message: "Successfully delete task", task: TASKS }),
     { status: 200 }
