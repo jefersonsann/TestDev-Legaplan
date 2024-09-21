@@ -1,0 +1,28 @@
+.header {
+  display: grid;
+  align-items: center;
+  gap: 0.5rem;
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1.5rem;
+
+  .welcome {
+    font-weight: 600;
+  }
+
+  .date {
+    font-weight: 400;
+    color: #0000008a;
+  }
+
+  @media (min-width: 450px) {
+    grid-template-columns: repeat(3, 1fr);
+
+    .welcome {
+      text-align: center;
+    }
+
+    .date {
+      text-align: end;
+    }
+  }
+}
