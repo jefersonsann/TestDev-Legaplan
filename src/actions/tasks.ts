@@ -38,4 +38,22 @@ async function getTasks() {
   return TASKS;
 }
 
-export { createTask, getTasks };
+async function updateTask({ id }: { id: string }) {
+  try {
+    const index = TASKS.findIndex((task) => task.id === id);
+
+    TASKS[index].completed = !TASKS[index].completed;
+
+    return new Response(
+      JSON.stringify({ message: "Successfully update task", task: TASKS }),
+      { status: 202 }
+    );
+  } catch (error: unknown) {
+    return new Response(
+      JSON.stringify({ message: "Error creating task", error }),
+      { status: 500 }
+    );
+  }
+}
+
+export { createTask, getTasks, updateTask };
