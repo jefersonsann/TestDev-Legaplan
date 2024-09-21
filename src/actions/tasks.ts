@@ -34,4 +34,8 @@ async function createTask(task: string) {
   }
 }
 
-export { createTask };
+async function getTasks() {
+  return TASKS;
+}
+
+export { createTask, getTasks };
