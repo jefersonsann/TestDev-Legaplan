@@ -48,16 +48,21 @@ dialog {
   padding: 2rem;
   border: none;
   border-radius: 1rem;
-  box-shadow: 0 24px 48px -12px rgb(16 24 40 /18%);
 }
 
 ::backdrop {
-  background-color: rgb(255 255 255 / 20%);
+  background-color: rgb(255 255 255);
   backdrop-filter: blur(3px);
 }
 
 @media (min-width: 450px) {
   dialog {
     height: fit-content;
+    box-shadow: 0 24px 48px -12px rgb(16 24 40 /18%);
+  }
+
+  ::backdrop {
+    background-color: rgb(255 255 255 / 20%);
+    backdrop-filter: blur(3px);
   }
 }
