@@ -56,4 +56,17 @@ async function updateTask({ id }: { id: string }) {
   }
 }
 
-export { createTask, getTasks, updateTask };
+async function deleteTask(id: string) {
+  const index = TASKS.findIndex((task) => task.id === id);
+  if (index === -1) {
+    throw new Error("Task not found");
+  }
+  TASKS.splice(index, 1);
+  localStorage.setItem("tasks", JSON.stringify(TASKS));
+  return new Response(
+    JSON.stringify({ message: "Successfully delete task", task: TASKS }),
+    { status: 200 }
+  );
+}
+
+export { createTask, deleteTask, getTasks, updateTask };
